@@ -33,8 +33,10 @@ Run the following command to install required dependencies:
 
 3. **Configure your environment**:
 Create a .env file in the root of the project with the following contents:
-PORT=8080
-DB_PATH=shortener.db
+    ```env
+    PORT=8080
+    DB_PATH=shortener.db
+    ```
 
 4. **Run the application**:
 To start the server, run:
@@ -54,12 +56,14 @@ The server will be available at http://localhost:8080.
   {
     "url": "https://example.com"
   }
+  ```
 
-Response:
-
-{
-  "short_url": "http://localhost:8080/<short-code>"
-}
+  **Response**:
+  ```json
+  {
+    "short_url": "http://localhost:8080/<short-code>"
+  }
+  ```
 
 ### Redirect to Original URL
 - **GET** /<short-code>
@@ -67,16 +71,12 @@ This endpoint will redirect to the original URL for the provided short code.
 
 ## Example Usage
 
-Shorten a URL:
-curl -X POST http://localhost:8080/shorten -H "Content-Type: application/json" -d '{"url": "https://example.com"}'
-Redirect using the short URL:
-Navigate to http://localhost:8080/<short-code> to be redirected to the original URL.
+### Shorten a URL:
+    ```bash
+    curl -X POST http://localhost:8080/shorten -H "Content-Type: application/json" -d '{"url": "https://example.com"}'
+    ```
 
-## Example Usage
-
-Shorten a URL:
-curl -X POST http://localhost:8080/shorten -H "Content-Type: application/json" -d '{"url": "https://example.com"}'
-Redirect using the short URL:
+### Redirect using the short URL:
 Navigate to http://localhost:8080/<short-code> to be redirected to the original URL.
 
 ## Logging
