@@ -72,9 +72,9 @@ This endpoint will redirect to the original URL for the provided short code.
 ## Example Usage
 
 ### Shorten a URL:
-    ```bash
-    curl -X POST http://localhost:8080/shorten -H "Content-Type: application/json" -d '{"url": "https://example.com"}'
-    ```
+```bash
+curl -X POST http://localhost:8080/shorten -H "Content-Type: application/json" -d '{"url": "https://example.com"}'
+```
 
 ### Redirect using the short URL:
 Navigate to http://localhost:8080/<short-code> to be redirected to the original URL.
@@ -82,11 +82,12 @@ Navigate to http://localhost:8080/<short-code> to be redirected to the original 
 ## Logging
 
 The server logs all incoming requests and database operations.
+```bash
 Logs are printed in the following format:
 [INFO] Shortening URL: https://example.com
 [INFO] Generated short code: <short-code>
 [INFO] Redirecting <short-code> => https://example.com
-
+```
 
 ## License
 
