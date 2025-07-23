@@ -82,8 +82,9 @@ Navigate to http://localhost:8080/<short-code> to be redirected to the original 
 ## Logging
 
 The server logs all incoming requests and database operations.
-```bash
+
 Logs are printed in the following format:
+```bash
 [INFO] Shortening URL: https://example.com
 [INFO] Generated short code: <short-code>
 [INFO] Redirecting <short-code> => https://example.com
